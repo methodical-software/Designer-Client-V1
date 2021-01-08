@@ -1,0 +1,66 @@
+.log-container {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    width: 30vw;
+    max-width: 500px;
+    min-width: 280px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: white;
+}
+
+.header-container {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    background-color: rgb(224, 225, 226);
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.log-header {
+    font-size: 15px !important;
+    height: 30px;
+    display: flex !important;
+    align-items: center;
+    padding: 0 0 0 20px !important;
+    margin: 0 !important;
+    width: 94%;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.log-stream {
+    height: 250px;
+    line-height: 1.4;
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.trash-custom {
+    margin: 0 !important;
+    padding: 7px !important;
+}
+
+.ui.button:not(.icon) > .icon:not(.button):not(.dropdown) {
+    margin: 0 !important;
+}
+
+.blinking-blue {
+    animation: blinkingHeader 1.3s infinite;
+}
+
+@keyframes blinkingHeader {
+    0% {
+        background-color: rgb(224, 225, 226);
+    }
+    50% {
+        background-color: rgb(147, 181, 255);
+    }
+    100% {
+        background-color: rgb(224, 225, 226);
+    }
+}

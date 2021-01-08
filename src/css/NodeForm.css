@@ -1,0 +1,92 @@
+.node-form {
+    margin: 5px;
+}
+
+.ui.selection.dropdown .menu>.item > span {
+    display: block;
+}
+
+.ui.selection.dropdown .menu>.item {
+    display: flex;
+    align-items: center;
+}
+
+.node-form-grid {
+    padding: 3px 5px 3px 5px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: [top-border] repeat(2, [row-start] 60px [row-end]) [row-start] 25px [row-end] 40px [row-end bottom-border];
+}
+
+.node-label {
+    grid-column: 1 / 6;
+    grid-row: row-start 1 / row-end 1;
+}
+
+.node-type {
+    grid-column: 6 / 11;
+    grid-row: row-start 1 / row-end 1;
+}
+
+.node-story {
+    grid-column: 1 / 11;
+    grid-row: row-start 2 / row-end 2;
+}
+
+.node-synchronous {
+    grid-row: row-start 3 / row-end 3;
+    grid-column: 2 / 5;
+}
+
+.node-unreliable {
+    grid-row: row-start 3 / row-end 3;
+    grid-column: 7 / 9;
+}
+
+.edit-button-area-node {
+    grid-column: 1 / 11;
+    grid-row: 4 / 5;
+}
+
+.save-button-node {
+    max-width: 110px;
+    grid-column: 2 / 11;
+    grid-row: 4 / 5;
+}
+
+@media screen and (max-width: 750px) {
+    .node-form-grid, .save-button-node {
+        font-size: 0.9em !important;
+    }
+    .node-form-grid {
+        grid-row-gap: 0;
+        padding: 0 !important;
+        grid-template-rows: [top-border] repeat(2, [row-start] 57px [row-end]) [row-start] 25px [row-end] 25px [row-end bottom-border];
+    }
+    .ui.checkbox label {
+        font-size: 0.9em !important;
+    }
+    .node-form {
+        overflow: auto;
+        max-height: 160px;
+        margin: 2px !important;
+    }
+    .save-button-node {
+        grid-column: 8 / 11;
+        grid-row: row-start 3 / row-end 3;
+        padding: 0.3em 1.5em !important;
+    }
+    .node-synchronous {
+        grid-row: row-start 3 / row-end 3;
+        grid-column: 1 / 5;
+    }
+    .node-unreliable {
+        grid-row: row-start 3 / row-end 3;
+        grid-column: 5 / 8;
+    }
+    .node-edit-button {
+        font-size: 0.9em !important;
+        padding: 0 15px !important;
+    }
+}
